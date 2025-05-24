@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <script defer src="./index.js"></script>
+</head>
+<body>
+<header>
+  <div class="navbar-container">
+    <div class="logo">Portfolio.</div>
+
+    <nav class="nav">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+
+      <!-- Hamburger & Close Icons -->
+      <div class="menu-icons">
+        <i class="fas fa-bars" id="open-menu"></i>
+        <i class="fas fa-times" id="close-menu"></i>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="hero">
+    <div class="content">
+      <h1>Hello, I'm <span class="highlight">Kelvin</span></h1>
+      <h2>A <span class="highlight">Fullstack Developer</span></h2>
+      <!-- <p>I'm passionate about creating modern, responsive web applications. As a Full-Stack Developer, I specialize in building seamless digital experiences from the ground up — handling both front-end design and back-end architecture. I enjoy crafting clean user interfaces with HTML, CSS, JavaScript, and React, while also developing scalable server-side logic using Node.js, Express, and MongoDB. I thrive in fast-paced environments where I can turn ideas into real products, always prioritizing performance, accessibility, and user experience. Whether it's a landing page, a complex SaaS platform, or a custom automation tool, I bring a mix of creativity and technical expertise to every project I build.</p> -->
+
+      <div class="buttons">
+        <a href="#" class="btn">Download CV</a>
+        <div class="socials">
+          <a href="https://github.com/Kel-D-Coder"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/chibundu-okolo-16119a28b/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" /></a>
+          <a href="https://www.instagram.com/kelvinwebsolution/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="profile-pic">
+      <img src="./images/WhatsApp Image 2025-05-24 at 10.15.53_b63a8ddc.jpg" alt="Your photo" />
+    </div>
+  </section>
+
+  <section class="about" id="about">
+  <div class="about-container">
+
+    <!-- Right: Text & Skills -->
+    <div class="about-content" id="#about">
+      <h2>About Me</h2>
+      <p>
+        I’m a passionate Full-Stack Web Developer with a strong focus on building scalable, high-performance web applications from start to finish. With experience in both front-end and back-end development, I craft seamless user experiences and robust server-side logic that drive business success.
+      </p>
+
+      <p>
+        On the front end, I specialize in modern technologies like <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, and <strong>TailwindCSS</strong> to build responsive, interactive interfaces. On the back end, I work with <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong> to create reliable APIs, manage databases, and implement authentication and payment systems.
+      </p>
+
+      <p>
+        Whether I’m developing a SaaS platform, building automation tools, or deploying full-stack applications, I prioritize clean code, performance, and user-centric design. I'm constantly learning and evolving, aiming to build technology that solves real-world problems and delivers value to users.
+      </p>
+
+      <a href="#contact" class="btn">Let's Connect</a>
+
+      <!-- Skills -->
+      <div class="skills">
+        <h3>My Skills</h3>
+        <ul class="skills-list">
+          <li><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png" alt="HTML Icon">HTML5</li>
+          <li><img src="https://cdn-icons-png.freepik.com/256/732/732190.png?semt=ais_hybrid" alt="CSS Icon">CSS3</li>
+          <li><img src="https://xabikos.gallerycdn.vsassets.io/extensions/xabikos/javascriptsnippets/1.8.0/1587489699375/Microsoft.VisualStudio.Services.Icons.Default" alt="JS Icon">JavaScript</li>
+          <li><img src="https://www.dsebastien.net/content/images/2022/12/typescript-1.svg" alt="TS Icon">TypeScript</li>
+          <li><img src="https://dabeng.github.io/img/reactjs.png" alt="React Icon">React.js</li>
+          <li><img src="https://petermekhaeil.gallerycdn.vsassets.io/extensions/petermekhaeil/vscode-tailwindcss-explorer/0.7.0/1655742967328/Microsoft.VisualStudio.Services.Icons.Default" alt="Tailwind Icon">TailwindCSS</li>
+          <li><img src="https://pulkitgangwar.gallerycdn.vsassets.io/extensions/pulkitgangwar/nextjs-snippets/1.0.2/1713018281951/Microsoft.VisualStudio.Services.Icons.Default" alt="Next.js Icon">Next.js</li>
+          <li><img src="https://chris-noring.gallerycdn.vsassets.io/extensions/chris-noring/node-snippets/1.4.0/1741816063472/Microsoft.VisualStudio.Services.Icons.Default" alt="Node Icon">Node.js</li>
+          <li><img src="https://coolify.io/docs/images/database-logos/mongodb.webp" alt="MongoDB Icon">MongoDB</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="projects-container">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="./images/Screenshot 2025-05-22 131041.png" alt="Project Screenshot">
+        <div class="project-info">
+          <h3>Mock Interview App</h3>
+          <p>A full-stack app for mock technical interviews with AI assistance, recruiter interviews, and call help.</p>
+          <div class="tech-tags">
+            <span>Next.js</span><span>TypeScript</span><span>Firebase</span><span>TailwindCSS</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://yourdemo.com" target="_blank">Live Demo</a> -->
+            <a href="https://github.com/Kel-D-Coder/prep-assist" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="./images/Screenshot 2025-05-22 130855.png" alt="Project Screenshot">
+        <div class="project-info">
+          <h3>Amazon Price Tracker</h3>
+          <p>A MERN stack bot that notifies users via email when product prices drop on Amazon.</p>
+          <div class="tech-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Puppeteer</span><span>TailwindCSS</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://yourdemo2.com" target="_blank">Live Demo</a> -->
+            <a href="https://github.com/Kel-D-Coder/amazon-scrapy" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./images/Screenshot 2025-05-24 095005.png" alt="Project Screenshot">
+        <div class="project-info">
+          <h3>Crypto Investment Platform</h3>
+          <!-- <span class="project-status">Still Building</span> -->
+          <p>A website that allow users to invest cryptocurrency.</p>
+          <div class="tech-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span><span>TailwindCSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Kel-D-Coder/crypto-investment">Code</a>
+            <a href="https://cryptoinc.netlify.app/">Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./images/Screenshot 2025-05-24 095814.png" alt="Project Screenshot">
+        <div class="project-info">
+          <h3>Crypto Investment Platform</h3>
+          <!-- <span class="project-status">Still Building</span> -->
+          <p>A website where you can purchase shoes for girls</p>
+          <div class="tech-tags">
+            <span>Nextjs</span><span>TailwindCSS</span><span>TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Kel-D-Coder/shoe-store">Code</a>
+            <a href="https://ltfh.netlify.app/">Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more project-card blocks as needed -->
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Kelvin Okolo. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
