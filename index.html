@@ -1,195 +1,447 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="description" content="Kelvin Okolo — Full-Stack Developer building fast, scalable web applications with React, Next.js, TypeScript and Node.js. Available for freelance and full-time roles." />
+  <meta name="theme-color" content="#05060a" />
+
+  <!-- Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kelvin Okolo — Full-Stack Developer" />
+  <meta property="og:description" content="I design and build fast, scalable web products end to end — from interface to API." />
+  <meta property="og:image" content="./images/IMG_20250817_113637_472@-548247258.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Kelvin Okolo — Full-Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script defer src="./index.js"></script>
 </head>
+
 <body>
-<header>
-  <div class="navbar-container">
-    <div class="logo">Portfolio.</div>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
-    <nav class="nav">
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
+  <!-- Soft glow that follows the cursor -->
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
-      <!-- Hamburger & Close Icons -->
-      <div class="menu-icons">
-        <i class="fas fa-bars" id="open-menu"></i>
-        <i class="fas fa-times" id="close-menu"></i>
-      </div>
-    </nav>
-  </div>
-</header>
+  <!-- ============ HEADER ============ -->
+  <header id="site-header">
+    <div class="navbar-container">
+      <a href="#top" class="logo" aria-label="Kelvin Okolo — home">
+        <span class="logo-mark">KO</span>
+        <span class="logo-text">Kelvin<span class="dot">.</span></span>
+      </a>
 
-
-  <section class="hero">
-    <div class="content">
-      <h1>Hello, I'm <span class="highlight">Kelvin</span></h1>
-      <h2>A <span class="highlight">Fullstack Developer</span></h2>
-      <!-- <p>I'm passionate about creating modern, responsive web applications. As a Full-Stack Developer, I specialize in building seamless digital experiences from the ground up — handling both front-end design and back-end architecture. I enjoy crafting clean user interfaces with HTML, CSS, JavaScript, and React, while also developing scalable server-side logic using Node.js, Express, and MongoDB. I thrive in fast-paced environments where I can turn ideas into real products, always prioritizing performance, accessibility, and user experience. Whether it's a landing page, a complex SaaS platform, or a custom automation tool, I bring a mix of creativity and technical expertise to every project I build.</p> -->
-
-      <div class="buttons">
-        <a href="./assets/Kelvin_Resume-1.docx" class="btn">Download CV</a>
-        <div class="socials">
-          <a href="https://github.com/Kel-D-Coder"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" /></a>
-          <a href="https://www.linkedin.com/in/chibundu-okolo-16119a28b/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" /></a>
-          <a href="https://www.instagram.com/kelvinwebsolution/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="profile-pic">
-      <img src="./images/IMG_20250817_113637_472@-548247258.jpg" alt="Your photo" />
-    </div>
-  </section>
-
-  <section class="about" id="about">
-  <div class="about-container">
-
-    <!-- Right: Text & Skills -->
-    <div class="about-content" id="#about">
-      <h2>About Me</h2>
-      <p>
-        I’m a passionate Full-Stack Web Developer with a strong focus on building scalable, high-performance web applications from start to finish. With experience in both front-end and back-end development, I craft seamless user experiences and robust server-side logic that drive business success.
-      </p>
-
-      <p>
-        On the front end, I specialize in modern technologies like <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, and <strong>TailwindCSS</strong> to build responsive, interactive interfaces. On the back end, I work with <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong> to create reliable APIs, manage databases, and implement authentication and payment systems.
-      </p>
-
-      <p>
-        Whether I’m developing a SaaS platform, building automation tools, or deploying full-stack applications, I prioritize clean code, performance, and user-centric design. I'm constantly learning and evolving, aiming to build technology that solves real-world problems and delivers value to users.
-      </p>
-
-      <a href="tel:7089338862" class="btn">Let's Connect</a>
-
-      <!-- Skills -->
-      <div class="skills">
-        <h3>My Skills</h3>
-        <ul class="skills-list">
-          <li><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png" alt="HTML Icon">HTML5</li>
-          <li><img src="https://cdn-icons-png.freepik.com/256/732/732190.png?semt=ais_hybrid" alt="CSS Icon">CSS3</li>
-          <li><img src="https://xabikos.gallerycdn.vsassets.io/extensions/xabikos/javascriptsnippets/1.8.0/1587489699375/Microsoft.VisualStudio.Services.Icons.Default" alt="JS Icon">JavaScript</li>
-          <li><img src="https://www.dsebastien.net/content/images/2022/12/typescript-1.svg" alt="TS Icon">TypeScript</li>
-          <li><img src="https://dabeng.github.io/img/reactjs.png" alt="React Icon">React.js</li>
-          <li><img src="https://petermekhaeil.gallerycdn.vsassets.io/extensions/petermekhaeil/vscode-tailwindcss-explorer/0.7.0/1655742967328/Microsoft.VisualStudio.Services.Icons.Default" alt="Tailwind Icon">TailwindCSS</li>
-          <li><img src="https://pulkitgangwar.gallerycdn.vsassets.io/extensions/pulkitgangwar/nextjs-snippets/1.0.2/1713018281951/Microsoft.VisualStudio.Services.Icons.Default" alt="Next.js Icon">Next.js</li>
-          <li><img src="https://chris-noring.gallerycdn.vsassets.io/extensions/chris-noring/node-snippets/1.4.0/1741816063472/Microsoft.VisualStudio.Services.Icons.Default" alt="Node Icon">Node.js</li>
-          <li><img src="https://coolify.io/docs/images/database-logos/mongodb.webp" alt="MongoDB Icon">MongoDB</li>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#top" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#projects" class="nav-link">Work</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-cta-mobile"><a href="#contact" class="btn btn-primary">Hire me</a></li>
         </ul>
+
+        <a href="#contact" class="btn btn-primary nav-cta">Hire me</a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="content">
+          <p class="availability" data-reveal>
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Available for new projects
+          </p>
+
+          <h1 data-reveal data-reveal-delay="60">
+            Hi, I&rsquo;m <span class="highlight">Kelvin</span> &mdash;<br />
+            I build <span class="sr-only">full-stack web apps.</span><span class="typed" id="typed-role" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span>
+          </h1>
+
+          <p class="lede" data-reveal data-reveal-delay="120">
+            Full-stack developer specialising in <strong>React</strong>, <strong>Next.js</strong>,
+            <strong>TypeScript</strong> and <strong>Node.js</strong>. I turn ideas into
+            production-ready products &mdash; clean interfaces on the front, reliable APIs on the back.
+          </p>
+
+          <div class="buttons" data-reveal data-reveal-delay="180">
+            <a href="#projects" class="btn btn-primary magnetic">
+              View my work <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="./assets/Resume.docx" class="btn btn-ghost magnetic" download>
+              <i class="fas fa-download" aria-hidden="true"></i> Download CV
+            </a>
+          </div>
+
+          <div class="socials" data-reveal data-reveal-delay="240">
+            <a href="https://github.com/Kel-D-Coder" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/chibundu-okolo-16119a28b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/kelvindevs?stkn=MTR3Z3Y2YWpyMHZjaA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="mailto:okolokelvin02@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          </div>
+
+          <ul class="stats" data-reveal data-reveal-delay="300">
+            <li><strong data-count="15" data-suffix="+">0</strong><span>Projects shipped</span></li>
+            <li><strong data-count="3" data-suffix="+">0</strong><span>Years building</span></li>
+            <li><strong data-count="100" data-suffix="%">0</strong><span>Client satisfaction</span></li>
+          </ul>
+        </div>
+
+        <div class="profile-pic" data-reveal data-reveal-delay="120">
+          <div class="photo-stage" id="photo-stage">
+            <div class="photo-ring" aria-hidden="true"></div>
+            <div class="photo-card">
+              <img src="./images/IMG_20260831_094949_248@-1780309873.jpg" alt="Portrait of Kelvin Okolo" />
+            </div>
+            <div class="float-chip chip-1" aria-hidden="true"><i class="fab fa-react"></i> React</div>
+            <div class="float-chip chip-2" aria-hidden="true"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="float-chip chip-3" aria-hidden="true"><i class="fas fa-code"></i> TypeScript</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#marquee" class="scroll-cue" aria-label="Scroll to content">
+        <span class="mouse" aria-hidden="true"></span>
+        <span class="scroll-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ TECH MARQUEE ============ -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>React</span><span class="sep">&bull;</span><span>Next.js</span><span class="sep">&bull;</span><span>TypeScript</span><span class="sep">&bull;</span>
+        <span>Node.js</span><span class="sep">&bull;</span><span>Express</span><span class="sep">&bull;</span><span>MongoDB</span><span class="sep">&bull;</span>
+        <span>TailwindCSS</span><span class="sep">&bull;</span><span>REST APIs</span><span class="sep">&bull;</span><span>Firebase</span><span class="sep">&bull;</span>
+        <span>Git</span><span class="sep">&bull;</span>
+        <span>React</span><span class="sep">&bull;</span><span>Next.js</span><span class="sep">&bull;</span><span>TypeScript</span><span class="sep">&bull;</span>
+        <span>Node.js</span><span class="sep">&bull;</span><span>Express</span><span class="sep">&bull;</span><span>MongoDB</span><span class="sep">&bull;</span>
+        <span>TailwindCSS</span><span class="sep">&bull;</span><span>REST APIs</span><span class="sep">&bull;</span><span>Firebase</span><span class="sep">&bull;</span>
+        <span>Git</span><span class="sep">&bull;</span>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="projects" id="projects">
-  <div class="projects-container">
-    <h2 class="section-title">My Projects</h2>
+    <!-- ============ ABOUT ============ -->
+    <section class="about section" id="about">
+      <div class="container about-container">
+        <div class="about-content">
+          <p class="eyebrow" data-reveal>About me</p>
+          <h2 class="section-title" data-reveal data-reveal-delay="60">
+            I build software that <span class="highlight">earns its keep</span>
+          </h2>
 
-    <div class="project-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <img src="./images/Screenshot 2025-05-22 131041.png" alt="Project Screenshot">
-        <div class="project-info">
-          <h3>Mock Interview App</h3>
-          <p>A full-stack app for mock technical interviews with AI assistance, recruiter interviews, and call help.</p>
-          <div class="tech-tags">
-            <span>Next.js</span><span>TypeScript</span><span>Firebase</span><span>TailwindCSS</span>
-          </div>
-          <div class="project-links">
-            <!-- <a href="https://yourdemo.com" target="_blank">Live Demo</a> -->
-            <a href="https://github.com/Kel-D-Coder/prep-assist" target="_blank">Code</a>
+          <p data-reveal data-reveal-delay="120">
+            I&rsquo;m a full-stack web developer focused on shipping scalable, high-performance
+            applications end to end. I care about the details users actually feel. fast loads,
+            obvious interfaces, and flows that don&rsquo;t break under real traffic.
+          </p>
+
+          <p data-reveal data-reveal-delay="160">
+            On the front end I work with <strong>React</strong>, <strong>Next.js</strong>,
+            <strong>TypeScript</strong> and <strong>TailwindCSS</strong>. On the back end I build
+            reliable APIs with <strong>Node.js</strong>, <strong>Express</strong> and
+            <strong>MongoDB</strong>, including authentication, payments and third-party integrations.
+          </p>
+
+          <p data-reveal data-reveal-delay="200">
+            Whether it&rsquo;s a SaaS platform, an automation tool or a storefront for a client, I work
+            like a teammate: clear communication, sensible tradeoffs, and code the next developer
+            can actually read.
+          </p>
+
+          <div class="about-actions" data-reveal data-reveal-delay="240">
+            <a href="#contact" class="btn btn-primary magnetic">Let&rsquo;s work together</a>
+            <a href="tel:+2347089338862" class="btn btn-ghost magnetic"><i class="fas fa-phone" aria-hidden="true"></i> Call me</a>
           </div>
         </div>
+
+        <aside class="about-aside">
+          <div class="code-window" data-reveal data-reveal-delay="140" data-tilt>
+            <div class="code-bar" aria-hidden="true">
+              <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              <em>developer.ts</em>
+            </div>
+            <pre class="code-body"><code><span class="c-key">const</span> <span class="c-var">kelvin</span>: <span class="c-type">Developer</span> = {
+  <span class="c-prop">role</span>: <span class="c-str">"Full-Stack Developer"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"React"</span>, <span class="c-str">"Next.js"</span>, <span class="c-str">"Node"</span>],
+  <span class="c-prop">focus</span>: <span class="c-str">"products that ship"</span>,
+  <span class="c-prop">openTo</span>: [<span class="c-str">"full-time"</span>, <span class="c-str">"contract"</span>],
+  <span class="c-prop">available</span>: <span class="c-bool">true</span>,
+};</code></pre>
+          </div>
+
+          <ul class="quick-facts" data-reveal data-reveal-delay="200">
+            <li><span>Based in</span><strong>Nigeria &middot; remote-friendly</strong></li>
+            <li><span>Replies within</span><strong>24 hours</strong></li>
+            <li><span>Open to</span><strong>Full-time, contract, freelance</strong></li>
+          </ul>
+        </aside>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card">
-        <img src="./images/Screenshot 2025-05-22 130855.png" alt="Project Screenshot">
-        <div class="project-info">
-          <h3>Amazon Price Tracker</h3>
-          <p>A MERN stack bot that notifies users via email when product prices drop on Amazon.</p>
-          <div class="tech-tags">
-            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Puppeteer</span><span>TailwindCSS</span>
-          </div>
-          <div class="project-links">
-            <!-- <a href="https://yourdemo2.com" target="_blank">Live Demo</a> -->
-            <a href="https://github.com/Kel-D-Coder/amazon-scrapy" target="_blank">Code</a>
-          </div>
+      <div class="container">
+        <div class="skills">
+          <h3 data-reveal>Tools I reach for</h3>
+          <ul class="skills-list">
+              <li data-reveal data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/html5.svg" alt="" loading="lazy" /><span>HTML5</span></li>
+              <li data-reveal data-reveal-delay="40" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/css3.svg" alt="" loading="lazy" /><span>CSS3</span></li>
+              <li data-reveal data-reveal-delay="80" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" alt="" loading="lazy" /><span>JavaScript</span></li>
+              <li data-reveal data-reveal-delay="120" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/typescript.svg" alt="" loading="lazy" /><span>TypeScript</span></li>
+              <li data-reveal data-reveal-delay="160" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg" alt="" loading="lazy" /><span>React.js</span></li>
+              <li data-reveal data-reveal-delay="200" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nextdotjs.svg" alt="" loading="lazy" /><span>Next.js</span></li>
+              <li data-reveal data-reveal-delay="240" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg" alt="" loading="lazy" /><span>TailwindCSS</span></li>
+              <li data-reveal data-reveal-delay="280" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nodedotjs.svg" alt="" loading="lazy" /><span>Node.js</span></li>
+              <li data-reveal data-reveal-delay="320" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/express.svg" alt="" loading="lazy" /><span>Express</span></li>
+              <li data-reveal data-reveal-delay="360" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mongodb.svg" alt="" loading="lazy" /><span>MongoDB</span></li>
+              <li data-reveal data-reveal-delay="400" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/firebase.svg" alt="" loading="lazy" /><span>Firebase</span></li>
+              <li data-reveal data-reveal-delay="440" data-tilt><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/git.svg" alt="" loading="lazy" /><span>Git</span></li>
+          </ul>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="./images/Screenshot 2025-05-24 095005.png" alt="Project Screenshot">
-        <div class="project-info">
-          <h3>Crypto Investment Platform</h3>
-          <!-- <span class="project-status">Still Building</span> -->
-          <p>A website that allow users to invest cryptocurrency.</p>
-          <div class="tech-tags">
-            <span>React</span><span>Node.js</span><span>MongoDB</span><span>TailwindCSS</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Kel-D-Coder/crypto-investment">Code</a>
-            <a href="https://cryptoinc.netlify.app/">Demo</a>
-          </div>
+    <!-- ============ SERVICES ============ -->
+    <section class="services section" id="services">
+      <div class="container">
+        <p class="eyebrow center" data-reveal>What I do</p>
+        <h2 class="section-title center" data-reveal data-reveal-delay="60">
+          How I can help your <span class="highlight">team</span>
+        </h2>
+
+        <div class="service-grid">
+          <article class="service-card" data-reveal data-tilt>
+            <div class="service-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+            <h3>Full-stack web apps</h3>
+            <p>Dashboards, SaaS platforms and internal tools built end to end &mdash; auth, database design, APIs and a UI that makes sense on the first try.</p>
+            <ul class="service-points">
+              <li>React / Next.js front ends</li>
+              <li>Node.js &amp; Express APIs</li>
+              <li>MongoDB schema design</li>
+            </ul>
+          </article>
+
+          <article class="service-card" data-reveal data-reveal-delay="80" data-tilt>
+            <div class="service-icon"><i class="fas fa-cart-shopping" aria-hidden="true"></i></div>
+            <h3>E-commerce &amp; payments</h3>
+            <p>Storefronts that load fast and convert &mdash; product catalogues, carts, checkout and payment integration wired up properly.</p>
+            <ul class="service-points">
+              <li>Payment gateway integration</li>
+              <li>Order &amp; inventory flows</li>
+              <li>SEO-ready Next.js builds</li>
+            </ul>
+          </article>
+
+          <article class="service-card" data-reveal data-reveal-delay="160" data-tilt>
+            <div class="service-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+            <h3>Automation &amp; integrations</h3>
+            <p>Scrapers, bots and scheduled jobs that remove manual work &mdash; plus clean integrations with the third-party services you already use.</p>
+            <ul class="service-points">
+              <li>Web scraping &amp; monitoring</li>
+              <li>Email &amp; notification systems</li>
+              <li>Third-party API work</li>
+            </ul>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="./images/Screenshot 2025-05-24 095814.png" alt="Project Screenshot">
-        <div class="project-info">
-          <h3>Little things for her</h3>
-          <!-- <span class="project-status">Still Building</span> -->
-          <p>A website where you can purchase shoes for girls</p>
-          <div class="tech-tags">
-            <span>Nextjs</span><span>TailwindCSS</span><span>TypeScript</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Kel-D-Coder/shoe-store">Code</a>
-            <a href="https://ltfh.netlify.app/">Demo</a>
-          </div>
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects section" id="projects">
+      <div class="container projects-container">
+        <p class="eyebrow center" data-reveal>Selected work</p>
+        <h2 class="section-title center" data-reveal data-reveal-delay="60">
+          Things I&rsquo;ve <span class="highlight">built</span>
+        </h2>
+
+        <div class="filters" data-reveal data-reveal-delay="120">
+          <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+          <button class="filter" data-filter="frontend" aria-pressed="false">Front-end</button>
+          <button class="filter" data-filter="client" aria-pressed="false">Client work</button>
         </div>
-      </div>
 
-      <div class="project-card">
-        <img src="./images/Screenshot 2025-11-26 153559.png">
-        <div class="project-info">
-          <h3>Patohner</h3>
-          <!-- <span class="project-status">Still Building</span> -->
-          <p>A website made for a client, where you can purchase bags and sandals</p>
-          <div class="tech-tags">
-            <span>Nextjs</span><span>TailwindCSS</span><span>TypeScript</span>
-          </div>
-          <div class="project-links">
-            <!-- <a href="https://github.com/Kel-D-Coder/shoe-store">Code</a> -->
-            <a href="https://www.patohner.com/">Demo</a>
-          </div>
+        <div class="project-grid">
+          <article class="project-card" data-tags="fullstack" data-reveal data-tilt>
+            <div class="project-media">
+              <img src="./images/Screenshot%202025-05-22%20131041.png" alt="Screenshot of the Mock Interview App" loading="lazy" />
+              <span class="project-badge">Full-stack</span>
+            </div>
+            <div class="project-info">
+              <h3>Mock Interview App</h3>
+              <p>An AI-assisted platform for practising technical interviews, with recruiter-style sessions and live call support.</p>
+              <div class="tech-tags">
+                <span>Next.js</span><span>TypeScript</span><span>Firebase</span><span>TailwindCSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Kel-D-Coder/prep-assist" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="fullstack" data-reveal data-reveal-delay="80" data-tilt>
+            <div class="project-media">
+              <img src="./images/Screenshot%202025-05-22%20130855.png" alt="Screenshot of the Amazon Price Tracker" loading="lazy" />
+              <span class="project-badge">Automation</span>
+            </div>
+            <div class="project-info">
+              <h3>Amazon Price Tracker</h3>
+              <p>A MERN-stack bot that scrapes product pages on a schedule and emails users the moment a price drops.</p>
+              <div class="tech-tags">
+                <span>React</span><span>Node.js</span><span>MongoDB</span><span>Puppeteer</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Kel-D-Coder/amazon-scrapy" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="fullstack" data-reveal data-reveal-delay="160" data-tilt>
+            <div class="project-media">
+              <img src="./images/Screenshot%202025-05-24%20095005.png" alt="Screenshot of the crypto investment platform" loading="lazy" />
+              <span class="project-badge">Full-stack</span>
+            </div>
+            <div class="project-info">
+              <h3>Crypto Investment Platform</h3>
+              <p>A platform where users create accounts, fund a wallet and track cryptocurrency investments from one dashboard.</p>
+              <div class="tech-tags">
+                <span>React</span><span>Node.js</span><span>MongoDB</span><span>TailwindCSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://cryptoinc.netlify.app/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live demo</a>
+                <a href="https://github.com/Kel-D-Coder/crypto-investment" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="frontend" data-reveal data-tilt>
+            <div class="project-media">
+              <img src="./images/Screenshot%202025-05-24%20095814.png" alt="Screenshot of the Little Things For Her shoe store" loading="lazy" />
+              <span class="project-badge">Front-end</span>
+            </div>
+            <div class="project-info">
+              <h3>Little Things For Her</h3>
+              <p>A women&rsquo;s shoe storefront with a filterable catalogue and a checkout flow built mobile-first.</p>
+              <div class="tech-tags">
+                <span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://ltfh.netlify.app/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live demo</a>
+                <a href="https://github.com/Kel-D-Coder/shoe-store" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="client frontend" data-reveal data-reveal-delay="80" data-tilt>
+            <div class="project-media">
+              <img src="./images/Screenshot%202025-11-26%20153559.png" alt="Screenshot of the Patohner bag and sandal store" loading="lazy" />
+              <span class="project-badge">Client work</span>
+            </div>
+            <div class="project-info">
+              <h3>Patohner <span class="live-tag">Live</span></h3>
+              <p>A production storefront built for a client selling bags and sandals &mdash; shipped, live, and in daily use.</p>
+              <div class="tech-tags">
+                <span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.patohner.com/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Visit site</a>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
 
-      <!-- Add more project-card blocks as needed -->
+        <p class="projects-footnote" data-reveal>
+          More on <a href="https://github.com/Kel-D-Coder" target="_blank" rel="noopener">GitHub</a> &mdash; I push most days.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow" data-reveal>Get in touch</p>
+          <h2 class="section-title" data-reveal data-reveal-delay="60">
+            Have a project, or a <span class="highlight">role to fill</span>?
+          </h2>
+          <p data-reveal data-reveal-delay="120">
+            I&rsquo;m open to full-time roles, contract work and freelance builds. Tell me what
+            you&rsquo;re working on and I&rsquo;ll get back to you within 24 hours.
+          </p>
+
+          <ul class="contact-list" data-reveal data-reveal-delay="160">
+            <li>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:okolochibundu887@gmail.com">okolochibundu887@gmail.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <a href="tel:+2347089338862">+234 708 933 8862</a>
+            </li>
+            <li>
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <a href="https://www.linkedin.com/in/chibundu-okolo-16119a28b/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-reveal data-reveal-delay="120" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="field">
+            <label for="message">What do you need built?</label>
+            <textarea id="message" name="message" rows="5" placeholder="A short description of the project, timeline and budget." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary magnetic full">
+            Send message <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          <p class="form-note" id="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-mark">KO</span>
+        <p>Full-stack developer, building on the web.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Kel-D-Coder" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/chibundu-okolo-16119a28b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/kelvindevs?stkn=MTR3Z3Y2YWpyMHZjaA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.tiktok.com/@chibunduokolo65?_r=1&_t=ZS-99t8c0YXiaL" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+      <p class="copyright">&copy; <span id="year">2026</span> Kelvin Okolo. All rights reserved.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-
-<footer>
-  <div class="footer-container">
-    <p>&copy; 2025 Kelvin Okolo. All rights reserved.</p>
-  </div>
-</footer>
-
-
+  <a href="#top" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </a>
 </body>
 </html>
